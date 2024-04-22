@@ -1,4 +1,4 @@
-import React, { SetStateAction, useCallback, useEffect, useState} from 'react';
+import React, { useCallback, useEffect, useState} from 'react';
 import "quill/dist/quill.snow.css"
 import Quill from "quill";
 import {io} from 'socket.io-client'
@@ -6,7 +6,7 @@ import {Socket} from 'socket.io-client'
 import {DefaultEventsMap} from "@socket.io/component-emitter"
 import { useParams } from 'react-router-dom';
 import saver from './FileSaver';
-import ReactDOM from 'react-dom/client';
+import './css/styles.css'
 
    
 const SAVE_INTERVAL_MS = 2000
@@ -155,6 +155,6 @@ if (doc?.hasChildNodes){
 
     
     return(
-        <div id="container" ref={wrapperRef}></div>
+        <div className="container" ref={wrapperRef}></div>
     )
 }
