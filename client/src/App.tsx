@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import TextEditor from './TextEditor';
 
 import {
@@ -19,8 +19,7 @@ function App() {
             <Route path="/" element={<Navigate to={`/documents/${uuidV4()}`} />} />
             
             <Route path="/documents/:id" element ={<TextEditor />} />
-            
-
+  
         </Routes>
       </Router>
     </div>
